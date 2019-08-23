@@ -7,7 +7,7 @@ const Intro = () => {
   return (
     <div className="intro-wrapper">
       <div className="intro-message">
-        <div className="intro-title title">WIPRO SKILL REGISTRY</div>
+        <div className="intro-title title">SKILL REGISTRY</div>
         <ul className="intro-list">
           <li>
             <div>
@@ -15,7 +15,7 @@ const Intro = () => {
             </div>
             <div>
               Showcase your skills to improve your visibility among the top
-              managers in WIPRO.
+              managers.
             </div>
           </li>
           <li>
@@ -28,7 +28,7 @@ const Intro = () => {
             <div>
               <i className="fas fa-life-ring fa-spin intro-icon" />
             </div>
-            <div>Find the best talents in WIPRO in one dedicated platform.</div>
+            <div>Find the best talents in one dedicated platform.</div>
           </li>
           <li>
             <div>

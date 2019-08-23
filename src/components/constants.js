@@ -68,7 +68,6 @@ const signUpFields = [
         key: EMAIL,
         type: 'email',
         placeholder: 'Enter your email...',
-        info: "We only accept Wipro email ids for security purposes"
     },
     {
         label: 'password',

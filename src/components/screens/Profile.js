@@ -1,6 +1,5 @@
 import React from "react";
 import { connect } from "react-redux";
-import { Link } from "react-router-dom";
 
 import { Icon, Row } from "../common";
 import { profileKeys } from "../constants";
@@ -13,37 +12,21 @@ class Profile extends React.Component {
     const { userId, token } = this.props;
     if (userId) {
       this.props.getProfile({ userId, token });
-      this.props.updateProfileState({ editPointer: '' });
+      this.props.updateProfileState({editPointer: ''});
     }
   }
   render() {
-    const {
-      profile,
-      userId,
-      user,
-      authorized
-    } = this.props;
-
-    const urlName = "/" + user.name.toLowerCase().replace(/ /g, "+");
-    const urlPrefix = "/" + authorized + urlName;
+    const { user, userId } = this.props;
 
     return (
-      <div className="container-fluid profile-wrapper">
-        <div className="col-lg-4 back-button-wrapper">
-          {!userId ?
-            <Link
-              to={urlPrefix + '/search/back'}
-            >
-              <i className="fas fa-chevron-left"></i>
-          </Link>
-            : null}
-        </div>
-        <div className="col-lg-4 form-box profile-form">
+      <div className="container-fluid">
+        <div className="col-lg-4" />
+        <div className="col-lg-4 form-box">
           <Icon align="center" size="jumbo-icon" type="fa-id-card" />
           {profileKeys.map(row => (
-            <Row key={"row" + row} label={row} description={profile[row]} />
+            <Row key={"row" + row} label={row} description={user[row]} />
           ))}
-          <EditProfile userId={userId} />
+          <EditProfile userId = {userId} />
         </div>
       </div>
     );
@@ -52,8 +35,7 @@ class Profile extends React.Component {
 
 function mapStatetoProps(state) {
   return {
-    profile: state.profile.user,
-    user: state.user.userData,
+    user: state.profile.user,
     authorized: state.user.authorized,
     token: state.user.token
   };

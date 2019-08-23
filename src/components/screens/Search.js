@@ -7,8 +7,8 @@ import { populateSearchBar } from "../../actions";
 
 class Search extends React.Component {
    componentDidMount() {
-      const { token, back } = this.props;
-      this.props.populateSearchBar({ token, back });
+      const { token } = this.props;
+      this.props.populateSearchBar({ token });
    }
    render() {
       const { pool } = this.props;

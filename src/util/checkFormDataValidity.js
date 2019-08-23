@@ -1,14 +1,14 @@
 import { MANAGER_ID, MANAGER_FLAG, EMAIL, NAME, PASSWORD } from "../constants";
 
 const checkFormDataValidity = ({ formData }) => {
-  const emailFormat = /^\w+([\.-]?\w+)*@wipro.com/;
+  // const emailFormat = /^\w+([\.-]?\w+)*@wipro.com/;
   const nameFormat = /^[a-zA-Z\s]*$/;
 
   if (!formData[NAME].match(nameFormat))
     return { isValid: false, message: "Please enter valid name" };
 
-  if (!formData[EMAIL].match(emailFormat))
-    return { isValid: false, message: "Please enter valid wipro email" };
+  // if (!formData[EMAIL].match(emailFormat))
+  //   return { isValid: false, message: "Please enter valid wipro email" };
 
   if (formData[PASSWORD].length < 8)
     return {

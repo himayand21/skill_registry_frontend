@@ -1,6 +1,8 @@
-## Skill registry frontend
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-This project was first pushed into a bitbucket repository. I have moved the finished product to my new github repository along with my backend code in skill_registry_backend repository.
+## Overview
+
+This project is imported from a bitbucket private repository. I have moved this project here for showcasing it as a public demo - hence, it shares a different database from the one being used in the actual application.
 
 ### `npm start`
 

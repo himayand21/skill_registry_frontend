@@ -29,14 +29,8 @@ const NavBar = props => {
             }
           >
             <span className="navbar-brand brand">
-              <img
-                src={logo}
-                alt="wipro"
-                height={48}
-                width={60}
-                className="wipro-logo"
-              />
-              Wipro Skill Registry
+              <i class="fas fa-briefcase" style={{color: 'white', marginRight: 20}}></i>
+              Skill Registry
             </span>
           </Link>
         </div>

@@ -1,4 +1,4 @@
-const BACKEND_URL = 'http://localhost:3048/';
+const BACKEND_URL = 'https://serene-caverns-13172.herokuapp.com/';
 const USER_ROUTE = "user/";
 const PROFILE_ROUTE = "profile/";
 const TOKEN = 'token';

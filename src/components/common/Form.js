@@ -80,13 +80,13 @@ const Form = props => {
           <input
             type="submit"
             value={props.buttonName}
-            className="form-button active"
+            className="form-control form-button active"
           />
           {props.columnDisplay ? (
             <div>
               <Button
                 label="RESET"
-                style="active"
+                style="active form-control"
                 handleClick={e => {
                   e.preventDefault();
                   props.resetSearch();

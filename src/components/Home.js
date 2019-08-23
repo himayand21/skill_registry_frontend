@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { Route, Redirect, BrowserRouter as Router } from "react-router-dom";
+import { Route, Redirect, HashRouter as Router } from "react-router-dom";
 
 import { getDataFromLocal } from "../actions";
 import { NavBar, Notification, Spinner, Footer } from "./common";
@@ -45,9 +45,7 @@ class Home extends React.Component {
             />
           )}
           <Route path={urlPrefix + "/view"} component={Profile} />
-          <Route exact path={urlPrefix + "/search"} component={Search} />
-          <Route path={urlPrefix + "/search/back"} render={() => <Search back/>} />
-          <Route path="/forgot" component={Intro} />
+          <Route path={urlPrefix + "/search"} component={Search} />
           </div>
         </Router>
         <Notification />

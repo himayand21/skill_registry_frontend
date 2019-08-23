@@ -44,9 +44,9 @@ export const resetSearchParams = () => {
   }
 }
 
-export const populateSearchBar = ({token, back}) => {
+export const populateSearchBar = ({token}) => {
   return async dispatch => {
-    if(!back) dispatch(resetProfilePoolState());
+    dispatch(resetProfilePoolState());
     const response = await getApi({
       route: PROFILE_ROUTE,
       action: "skills",

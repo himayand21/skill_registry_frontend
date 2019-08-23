@@ -26,7 +26,7 @@ const ViewButton = props => {
             <div className="col-xs-12">
                 <Button
                     label="VIEW PROFILE"
-                    style="active no-shadow"
+                    style="active"
                     handleClick={() => props.viewProfile(requestParams)}
                 />
             </div>
